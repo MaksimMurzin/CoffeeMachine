@@ -1,4 +1,5 @@
 from CoffeeUtilities import *
+from decimal import Decimal
 
 
 def report():
@@ -6,9 +7,13 @@ def report():
 
 
 def count_money_entered():
-    dimes = int(input("enter the number of dimes: ")) * 0.1
-    quarters = int(input("\nEnter number of quarters: "))*0.25
-    nickles = int(input("\nEnter number of nickles: "))*0.05
-    return dimes + quarters + nickles
+    dimes = Decimal(input("enter the number of dimes (£0.10): ")) * 0.1
+    quarters = Decimal(input("Enter number of quarters (£0.25): "))*0.25
+    nickles = Decimal(input("Enter number of nickles (£0.05): "))*0.05
+    total = dimes + quarters + nickles
+    print(f"total value entered: {total}")
+    return total
 
-def 
+
+
+
